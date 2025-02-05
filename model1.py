@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, classification_report
 import pickle
 
 # Load the csv file
-df = pd.read_csv("covid_preprocesseddata.csv"
+df = pd.read_csv("covid_preprocesseddata.csv")
 print(df.columns)
 
 print(df.head())
