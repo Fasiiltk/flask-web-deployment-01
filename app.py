@@ -20,7 +20,7 @@ model = pickle.load(open("model.pkl", "rb"))
 #STEP 4.Creating the Homepage Route
 @flask_app.route("/")#Defines the homepage route.
 def Home():
-    return render_template("index.html" #function renders the index.html template.
+    return render_template("index.html") #function renders the index.html template.
 #When a user visits the website, this function is executed, loading the index.html page.
 
 
