@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>COVID19 Physical impact </h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="time_bp" placeholder="time_bp" required="required" />
+        <input type="text" name="time_dp" placeholder="time_dp" required="required" />
+		<input type="text" name="travel_time" placeholder="travel_time" required="required" />
+		<input type="text" name="easeof_online" placeholder="easeof_online" required="required" />
+        <input type="text" name="home_env" placeholder="home_env" required="required" />
+		<input type="text" name="prod_inc" placeholder="prod_inc" required="required" />
+        <input type="text" name="sleep_bal" placeholder="sleep_bal" required="required" />
+        <input type="text" name="new_skill" placeholder="new_skill" required="required" />
+		<input type="text" name="fam_connect" placeholder="fam_connect" required="required" />
+        <input type="text" name="relaxed" placeholder="relaxed" required="required" />
+        <input type="text" name="self_time" placeholder="self_time" required="required" />
+		<input type="text" name="like_hw" placeholder="like_hw" required="required" />
+        <input type="text" name="dislike_hw" placeholder="dislike_hw" required="required" />
+        <input type="text" name="time_bp.1" placeholder="time_bp.1" required="required" />
+		<input type="text" name="age_18.0" placeholder="age_18.0" required="required" />
+        <input type="text" name="age_22.0" placeholder="age_22.0" required="required" />
+        <input type="text" name="age_29.0" placeholder="age_29.0" required="required" />
+		<input type="text" name="age_36.5" placeholder="age_36.5" required="required" />
+        <input type="text" name="age_45.0" placeholder="age_45.0" required="required" />
+        <input type="text" name="age_55.0" placeholder="age_55.0" required="required" />
+		<input type="text" name="age_65.0" placeholder="age_65.0" required="required" />
+        <input type="text" name="gender_Female" placeholder="gender_Female" required="required" />
+        <input type="text" name="gender_Male" placeholder="gender_Male" required="required" />
+		<input type="text" name="gender_Prefer not to say" placeholder="gender_Prefer not to say" required="required" />
+        <input type="text" name="occupation_Currently Out of Work" placeholder="occupation_Currently Out of Work" required="required" />
+        <input type="text" name="occupation_Entrepreneur" placeholder="occupation_Entrepreneur" required="required" />
+		<input type="text" name="occupation_Homemaker" placeholder="occupation_Homemaker" required="required" />
+        <input type="text" name="occupation_Medical Professional aiding efforts against COVID-19" placeholder="occupation_Medical Professional aiding efforts against COVID-19" required="required" />
+        <input type="text" name="occupation_Retired/Senior Citizen" placeholder="occupation_Retired/Senior Citizen" required="required" />
+        <input type="text" name="occupation_Student in College" placeholder="" required="required" />
+        <input type="text" name="occupation_Student in College" placeholder="occupation_Student in College" required="required" />
+        <input type="text" name="occupation_Student in School" placeholder="occupation_Student in School" required="required" />
+        <input type="text" name="occupation_Working Professional" placeholder="occupation_Working Professional" required="required" />
+        <input type="text" name="prefer_Complete Physical Attendance" placeholder="prefer_Complete Physical Attendance" required="required" />
+        <input type="text" name="prefer_Work/study from home" placeholder="prefer_Work/study from home" required="required" />
+        <input type="text" name="certaindays_hw_Maybe" placeholder="certaindays_hw_Maybe" required="required" />
+        <input type="text" name="certaindays_hw_No" placeholder="certaindays_hw_No" required="required" />
+        <input type="text" name="certaindays_hw_Y" placeholder="certaindays_hw_Yes" required="required" />
+        <input type="text" name="lifestyle_change" placeholder="lifestyle_change" required="required" />
+   
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
